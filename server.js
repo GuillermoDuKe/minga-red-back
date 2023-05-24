@@ -1,5 +1,6 @@
 import express from "express"; // En primer lugar importo el módulo de express.
 import "dotenv/config.js"
+import "./config/database.js"
 
 const server = express()       // Definimos un servidor directamente ejecutando el módulo como si fuera una función
 
@@ -9,4 +10,4 @@ const ready = ()=> console.log("Ready on: "+PORT) // Definimos la función que s
 
 server.listen(PORT, ready)     // Ejecutamos el método listen para poder inicializar el servidor. La callback “ready” es opcional pero nos ayudará a saber cuando el servidor esté funcionando.
 
-console.log(process.env.NODE_ENV)
+// console.log(process.env.NODE_ENV)
