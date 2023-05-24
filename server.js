@@ -4,6 +4,9 @@ import "./config/database.js"
 
 const server = express()       // Definimos un servidor directamente ejecutando el módulo como si fuera una función
 
+server.use(express.json())
+server.use(express.urlencoded({ extended: false }))
+
 const PORT = process.env.PORT || 8080              // Definimos el puerto local donde va a funcionar el servidor.
 
 const ready = ()=> console.log("Ready on: "+PORT) // Definimos la función que se va a ejecutar cuando se levante el servidor.
